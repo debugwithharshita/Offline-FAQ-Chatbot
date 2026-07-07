@@ -46,6 +46,9 @@ Bot: Python is a popular programming language.
 You: bye
 Bot: Goodbye! Have a nice day.
 
+## 📸 Project Screenshot
+screenshot_20260707-152347.jpg
+
 🚀 Future Improvements
 
 - Graphical User Interface (GUI)
