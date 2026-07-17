@@ -1,72 +1,87 @@
-Offline FAQ Chatbot
+# 🤖 FAQ Chatbot using Python
 
-📌 Overview
+![Python](https://shields.io)
+![NLP](https://shields.io)
+![Platform](https://shields.io)
 
-The Offline FAQ Chatbot is a simple Python-based console application that answers frequently asked questions from a predefined knowledge base. It works completely offline, making it lightweight, fast, and easy to use.
+A professional, rule-based Intelligent FAQ Chatbot built using Python, Natural Language Processing (NLP), and basic Machine Learning techniques. The application utilizes **TF-IDF (Term Frequency-Inverse Document Frequency)** and **Cosine Similarity** to mathematically evaluate user queries and fetch highly accurate responses from a predefined computer science knowledge base.
 
-This project is suitable for beginners who want to understand the basics of chatbot development using Python without relying on external APIs or machine learning models.
+Optimized to run seamlessly across both standard Desktop IDEs and Android-based terminal environments like Pydroid 3.
 
-✨ Features
+---
 
-- Works completely offline
-- Fast response time
-- Beginner-friendly Python code
-- Predefined FAQ knowledge base
-- Handles unknown questions with a default response
-- Easy to customize by adding new questions and answers
-- Console-based interactive interface
+## ✨ Key Features
 
-🛠️ Technologies Used
+* **Advanced Text Preprocessing**: Automates tokenization, case-normalization, punctuation stripping, and English stopword elimination.
+* **Vector Space Modeling**: Implements Scikit-Learn's `TfidfVectorizer` to convert unstructured raw string queries into weighted mathematical vectors.
+* **Cosine Similarity Matching**: Uses spatial geometry formulas to determine the closest conceptual match between user intent and the database.
+* **Strict Confidence Filtering**: Enforces a `0.25` similarity threshold score. If user input is too ambiguous, the bot gracefully triggers a polite fallback prompt.
+* **Cross-Platform CLI**: Interactive, memory-efficient command-line loop handling real-time runtime execution.
 
-- Python 3
+---
 
-📂 Project Structure
+## 🏗️ Project Architecture & Pipeline
 
-Offline-FAQ-Chatbot/
-│── faq_chatbot.py
-│── README.md
+```text
+ ┌──────────────┐       ┌──────────────────────┐       ┌────────────────────────┐
+ │  User Input  │ ───>  │  Text Preprocessing  │ ───>  │  TF-IDF Vectorization  │
+ └──────────────┘       │  (NLTK Stopwords)    │       └────────────────────────┘
+                        └──────────────────────┘                    │
+                                                                    ▼
+ ┌──────────────┐       ┌──────────────────────┐       ┌────────────────────────┐
+ │ Final Answer │ <───  │ Threshold Validation │ <───  │   Cosine Similarity    │
+ └──────────────┘       │      (> 0.25)        │       │   (vs Dataset Keys)    │
+                        └──────────────────────┘       └────────────────────────┘
+```
 
-▶️ How to Run
+---
 
-1. Install Python 3.
-2. Download or clone this repository.
-3. Open a terminal in the project folder.
-4. Run the following command:
+## 🛠️ Tech Stack & Requirements
 
-python faq_chatbot.py
+* **Core Language**: Python 3.x
+* **Primary Frameworks**:
+  * `nltk` (Natural Language Toolkit) - String tokenization and semantic filtering.
+  * `scikit-learn` - Vector mapping matrix operations.
+  * `string` - Standard structural operations.
 
-💬 Example
+---
 
-You: hello
-Bot: Hello! How can I help you?
+## 📋 Installation & Environment Setup
 
-You: what is python
-Bot: Python is a popular programming language.
+Ensure you have your environment configured with the required dependencies before bootstrapping the script.
 
-You: bye
-Bot: Goodbye! Have a nice day.
+### Desktop Deployment (Windows, macOS, Linux):
+Execute the following native pip command in your terminal console:
+```bash
+pip install nltk scikit-learn
+```
 
-## 📸 Project Screenshot
-screenshot_20260707-152347.jpg
+### Android Native Deployment (Pydroid 3):
+1. Launch the **Pydroid 3** application interface.
+2. Select the **Pip** management terminal from the left sidebar navigation menu.
+3. Search for `nltk` and `scikit-learn` independently, then click **Install**.
 
-🚀 Future Improvements
+---
 
-- Graphical User Interface (GUI)
-- Voice-based interaction
-- Database integration
-- Natural Language Processing (NLP)
-- Support for multiple languages
+## 🚀 Execution Guide
 
-🎯 Learning Outcomes
+1. Clone the project locally or pull it directly into your active workspace.
+2. Fire up the core script via your terminal command structure:
+   ```bash
+   python faq_chatbot.py
+   ```
+3. **Note on First Run**: The backend pipeline will automatically parse and sync missing remote packages (`punkt`, `punkt_tab`, `stopwords`) onto your local machine storage.
+4. Interact directly within the continuous interface (e.g., *"What is python?"*, *"What is machine learning?"*).
+5. Type `exit` smoothly to shut down and de-allocate memory safely.
 
-- Python programming
-- Dictionaries and loops
-- User input handling
-- Conditional statements
-- Basic chatbot development
+---
 
-👩‍💻 Author
+## 👩‍💻 Developer
 
-Harshita Jain
+* **Harshita Jain**
 
-If you found this project helpful, feel free to star this repository.
+---
+
+## 📄 License
+
+This repository is distributed under the open-source **MIT License**. Feel free to fork, modify, and utilize this project framework for your academic or custom implementations.
